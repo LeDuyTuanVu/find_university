@@ -1,4 +1,4 @@
-# find_university
+# Find University
 
 A new Flutter project.
 
