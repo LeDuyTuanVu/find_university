@@ -9,11 +9,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: AppColors.generateMaterialColor(AppColors.primaryColor),
-        // Hiển thị hình ảnh tương ứng với nền tảng đang chạy
+        // Display the image corresponding to the running platform
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(),
