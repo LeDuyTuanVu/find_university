@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color primaryColor = Color(0xFF64FFDA);
-  static const Color appBarTitle = Colors.black87;
+  static const Color black87 = Colors.black87;
+  static const Color black54 = Colors.black54;
+  static const Color black45 = Colors.black45;
+  static const Color black38 = Colors.black38;
+  static const Color black26 = Colors.black26;
+  static const Color black12 = Colors.black12;
+  static const Color black = Colors.black;
+  static const Color white = Colors.white;
 
   // Convert Color to MaterialColor to use primarySwatch
   static MaterialColor generateMaterialColor(Color color) {
@@ -38,4 +45,37 @@ class AppColors {
       shadeValue(color.green, factor),
       shadeValue(color.blue, factor),
       1);
+
+  // Contain use by flexibleSpace in appBar => Create gradient background
+  static Container flexibleSpace = Container(
+    decoration: BoxDecoration(
+      gradient: LinearGradient(
+        colors: [
+          const Color(0xFF64FFDA),
+          const Color(0xFF00CCFF),
+          // const Color(0xFFEB6F99),
+          // const Color(0xFFFF828F),
+        ],
+        begin: const FractionalOffset(0.0, 0.0),
+        end: const FractionalOffset(1.0, 0.0),
+        stops: [0.0, 1.0],
+        tileMode: TileMode.clamp,
+      ),
+    ),
+  );
+
+  static BoxDecoration decorationGradient = BoxDecoration(
+    gradient: LinearGradient(
+      colors: [
+        const Color(0xFF64FFDA),
+        const Color(0xFF00CCFF),
+        // const Color(0xFFEB6F99),
+        // const Color(0xFFFF828F),
+      ],
+      begin: const FractionalOffset(0.0, 0.0),
+      end: const FractionalOffset(1.0, 0.0),
+      stops: [0.0, 1.0],
+      tileMode: TileMode.clamp,
+    ),
+  );
 }
